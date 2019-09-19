@@ -21,13 +21,32 @@ public class ButtonCountActivity extends AppCompatActivity {
         tCounter = findViewById(R.id.display);
         incBtn = findViewById(R.id.btn_press);
 
-        tCounter.setText("0");
+        tCounter.setText("Don't Press the Button");
 
         incBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                counter = counter + 1;
+                counter = counter + 1 ;
                 tCounter.setText(String.valueOf(counter));
+                if (counter == 1 )  {
+                    tCounter.setText("O0Ooo you pressed the Button D;<");
+
+                }
+                if (counter == 10 )  {
+                    tCounter.setText("Serious...STOP 0:< ");
+
+                }
+                if (counter == 15 )  {
+                    tCounter.setText("STOP... ):< ");
+
+                }
+                if (counter == 20 )  {
+                    tCounter.setText("You Makin' Me MAD MAD!!! >;C");
+
+                }
+
+
+
             }
         });
     }
